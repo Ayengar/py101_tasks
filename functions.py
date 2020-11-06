@@ -3,17 +3,20 @@
 # напиши функцию, которая принимает на вход любое
 # количество чисел и сообщает, есть ли среди них чётное
 def even_numbers():
+            even_number_condition = 0
             single_number = ''
             numbers = input()
             for i in range(0, len(numbers)):
                 if numbers[i] != ' ' :
                     single_number = single_number + numbers[i]
                 else:
-                    print(single_number)
+                    if int(single_number) % 2 == 0:
+                        even_number_condition = 1
                     single_number = ''
-
-
-even_numbers()
+            if even_number_condition == 1 or int(single_number) % 2 == 0:
+                print('There are even number(s)')
+            else:
+                print('There are only odd numbers')
 
 
 # используй тернарный оператор, чтобы вызвать функцию
