@@ -2,13 +2,25 @@
 
 # напиши функцию, которая принимает на вход любое
 # количество чисел и сообщает, есть ли среди них чётное
+def even_numbers():
+            single_number = ''
+            numbers = input()
+            for i in range(0, len(numbers)):
+                if numbers[i] != ' ' :
+                    single_number = single_number + numbers[i]
+                else:
+                    print(single_number)
+                    single_number = ''
+
+
+even_numbers()
 
 
 # используй тернарный оператор, чтобы вызвать функцию
 # если возраст больше 21 года, в противном случае верни
 # сообщение "Мы не продаём алкоголь несовершеннолетним."
-age = 17
-sell_alcohol()
+# age = 17
+# sell_alcohol()
 
 
 # напиши функцию, которая проверит, является ли строка ключевым словом в Питоне
