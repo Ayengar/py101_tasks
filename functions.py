@@ -10,15 +10,15 @@ def even_numbers():
                 if numbers[i] != ' ' :
                     single_number = single_number + numbers[i]
                 else:
-                    if int(single_number) % 2 == 0:
-                        even_number_condition = 1
+                    if single_number != '':
+                        if int(single_number) % 2 == 0:
+                            even_number_condition = 1
                     single_number = ''
             if even_number_condition == 1 or int(single_number) % 2 == 0:
                 print('There are even number(s)')
             else:
                 print('There are only odd numbers')
-
-
+            
 # используй тернарный оператор, чтобы вызвать функцию
 # если возраст больше 21 года, в противном случае верни
 # сообщение "Мы не продаём алкоголь несовершеннолетним."
