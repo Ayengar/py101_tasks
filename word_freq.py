@@ -7,6 +7,10 @@
 
 Тебе может понадобится модуль os, модуль argparse, цикл и словарь
 """
+import os
+import argparse
+import nltk
+from nltk.corpus import stopwords
 
 if __name__ == '__main__':
     pass
