@@ -7,6 +7,16 @@
 
 Тебе может понадобиться цикл for и ветвления
 """
-
+number = 1
+while number !=101:
+    if number % 15 == 0:
+        print('zip-zap')
+    elif number % 5 == 0:
+        print('zap')
+    elif number % 3 == 0:
+        print('zip')
+    else:
+        print(number)
+    number = number + 1
 if __name__ == '__main__':
     pass
