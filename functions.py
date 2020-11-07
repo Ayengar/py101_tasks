@@ -23,10 +23,10 @@ def even_numbers():
 # используй тернарный оператор, чтобы вызвать функцию
 # если возраст больше 21 года, в противном случае верни
 # сообщение "Мы не продаём алкоголь несовершеннолетним."
-#def sell_alcohol():
-#    print('Продаем алкоголь')
-#age = 17
-#sell_alcohol() if age >= 21 else print('Мы не продаём алкоголь несовершеннолетним.')
+def sell_alcohol():
+    print('Продаем алкоголь')
+age = 17
+sell_alcohol() if age >= 21 else print('Мы не продаём алкоголь несовершеннолетним.')
 
 
 # напиши функцию, которая проверит, является ли строка ключевым словом в Питоне
@@ -35,22 +35,28 @@ def function_keyword():
     import keyword
     string = input()
     print('String is indeed a keyword in Python') if keyword.iskeyword(string) else print('String is not a keyword')
-#import keyword
-#print(keyword.kwlist)
-#function_keyword()
-#print(dir(keyword))
+
 # напиши функцию, которая возвращает тип данных на русском языке:
 # число, строка, булевый, None, список, кортеж, множество, словарь
 # пример: get_type("что-то") возвращает "Это строка."
 # пример2: get_type(42) возвращает "Это словарь."
-checked_object = [1, 2]
+checked_object = ('a', "B", "C")
 def get_type(checked_object):
-    print(type(checked_object))
     p = type(checked_object)
     if p == str:
         print('это строка')
     if p == list:
         print('это список')
-get_type(checked_object)
-
+    if p == bool:
+        print('это булевый')
+    if p == dict:
+        print('это словарь')
+    if p == tuple:
+        print('это кортеж')
+    if p == int or p == float:
+        print('это число')
+    if p == set:
+        print('это множество')
+    if p == None:
+        print('это None')
 
