@@ -31,19 +31,26 @@ def even_numbers():
 
 # напиши функцию, которая проверит, является ли строка ключевым словом в Питоне
 # тебе понадобится модуль keyword, импортируй его и изучи с помощью dir()
-#def function_keyword():
-#    import keyword
-#    string = input()
-#    print('String is indeed a keyword in Python') if keyword.iskeyword(string) else print('String is not a keyword')
+def function_keyword():
+    import keyword
+    string = input()
+    print('String is indeed a keyword in Python') if keyword.iskeyword(string) else print('String is not a keyword')
 #import keyword
 #print(keyword.kwlist)
 #function_keyword()
-
+#print(dir(keyword))
 # напиши функцию, которая возвращает тип данных на русском языке:
 # число, строка, булевый, None, список, кортеж, множество, словарь
 # пример: get_type("что-то") возвращает "Это строка."
 # пример2: get_type(42) возвращает "Это словарь."
-#checked_object = int(input())
-#def get_type():
-#    print(type(checked_object))
-#get_type()
+checked_object = [1, 2]
+def get_type(checked_object):
+    print(type(checked_object))
+    p = type(checked_object)
+    if p == str:
+        print('это строка')
+    if p == list:
+        print('это список')
+get_type(checked_object)
+
+
