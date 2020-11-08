@@ -11,6 +11,8 @@ import os
 import argparse
 import nltk
 from nltk.corpus import stopwords
-
+parser = argparse.ArgumentParser(description='Top-100 words')
+parser.add_argument('dir', type=str, help='Input text directory')
+args = parser.parse_args()
 if __name__ == '__main__':
     pass
