@@ -10,19 +10,23 @@
 import collections
 import argparse
 import os
-#import nltk
+import nltk
 from nltk.corpus import stopwords
 
 parser = argparse.ArgumentParser(description='Top-100 words')
 parser.add_argument('dir', type=str, help='Input text directory')
 args = parser.parse_args()
 path = args.path
-document = open(path)
+document = open(path, "r")
 text = document.read()
-#stopwords = set(nltk.corpus.stopwords.words('english'))
-#need to delete stopwords from text later
+
+stopwords = set(nltk.corpus.stopwords.words('english'))
+text_manipulation = text.split()
+text_manipulation2 = [word for word in text_manipulation if word.lower() not in stopwords]
+clean_text = ' '.join(text_manipulation2)
+
 words = []
-words = words + text.split()
+words = words + clean_text.split()
 #print(words)
 #dict_of_words = { i: words[i] for i in range(0, len(words)) }
 #print(dict_of_words)
