@@ -7,6 +7,7 @@
 
 Тебе может понадобиться цикл for и ветвления
 """
+if __name__ == '__main__':
 number = 1
 while number !=101:
     if number % 15 == 0:
@@ -18,5 +19,3 @@ while number !=101:
     else:
         print(number)
     number = number + 1
-if __name__ == '__main__':
-    pass

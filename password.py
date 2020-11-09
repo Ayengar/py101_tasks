@@ -5,6 +5,7 @@
 Сложным считается пароль, состоящий как минимум из 8-ми символов,
 включая цифры и алфавитные символы
 """
+if __name__ == '__main__':
 N = 1
 L = 0
 B = 0
@@ -29,6 +30,3 @@ if Safety_Condition != 0:
         print('Use upper & lower cases in your password')
 else:
     print('Your password is good')
-
-if __name__ == '__main__':
-    pass
