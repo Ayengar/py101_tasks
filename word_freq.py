@@ -15,6 +15,7 @@ import nltk
 import string
 from nltk.corpus import stopwords
 
+if __name__ == '__main__':
 parser = argparse.ArgumentParser(description='Top-100 words')
 parser.add_argument('path', type=Path, help='Input text directory')
 args = parser.parse_args()
@@ -31,10 +32,5 @@ clean_text = ' '.join(text_manipulation2)
 
 words = []
 words = words + clean_text.split()
-#print(words)
-#dict_of_words = { i: words[i] for i in range(0, len(words)) }
-#print(dict_of_words)
 most_common_words = collections.Counter(words).most_common(100)
 print(most_common_words)
-if __name__ == '__main__':
-    pass
